@@ -1,8 +1,10 @@
 from flask import Flask,request,jsonify
 import requests
 from bs4 import BeautifulSoup
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 star_ratings = [[0,1399,1],[1400,1599,2],[1600,1799,3],[1800,1999,4],[2000,2199,5],[2200,2499,6],[2500,3000,7]]
 
